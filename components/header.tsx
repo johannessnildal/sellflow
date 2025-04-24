@@ -3,7 +3,20 @@
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Menu } from 'lucide-react';
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 
 const HeaderContent = () => (
   <div className="flex items-center gap-10 lg:gap-20 justify-between">
@@ -34,8 +47,21 @@ const HeaderContent = () => (
           Log In
         </Button>
       </div>
-      <div>
+      <div className="flex flex-row gap-2">
         <Button className='hover:cursor-pointer'>Sign Up</Button>
+        <div className="block sm:hidden">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="outline"><Menu /></Button>
+            </SheetTrigger>
+            <SheetContent>
+              <div className="grid gap-4 py-4">
+              </div>
+              <SheetFooter>
+              </SheetFooter>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </div>
   </div>

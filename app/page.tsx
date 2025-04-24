@@ -7,7 +7,7 @@ import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { Button } from "@/components/ui/button";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { motion } from 'framer-motion';
-
+import Faq02 from "@/components/kokonutui/faq-02";
 
 export default function Home() {
   return (
@@ -51,7 +51,7 @@ export default function Home() {
       </div>
     </div>
     
-    <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16 md:-mt-10 mb-[500px]">
+    <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16 md:-mt-10">
       <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
         <GridItem
           area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
@@ -88,6 +88,9 @@ export default function Home() {
           description="Don't pay for more than you need. Our prices are based on your order volume, and scales with it."
         />
       </ul>
+    </div>
+    <div className="pt-14 md:pt-28">
+      <Faq02 />
     </div>
   </main>
   </motion.div>
