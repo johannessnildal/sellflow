@@ -25,11 +25,11 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
                 ease: "easeOut",
             }}
             className={cn(
-                "group rounded-lg border-[0.5px] border-gray-200/50 dark:border-gray-800/50",
+                "group rounded-lg border-[0.5px] border-gray-200/50 dark:border-zinc-800/50",
                 "transition-all duration-200 ease-in-out",
                 isOpen
-                    ? "bg-linear-to-br from-white via-gray-50/50 to-white dark:from-white/5 dark:via-white/2 dark:to-white/5"
-                    : "hover:bg-gray-50/50 dark:hover:bg-white/[0.02]"
+                    ? "bg-linear-to-br from-white/7 via-white/4 to-white/7"
+                    : "hover:bg-white/[0.02]"
             )}
         >
             <button
@@ -60,7 +60,7 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
                         "transition-colors duration-200",
                         isOpen
                             ? "text-primary"
-                            : "text-gray-400 dark:text-gray-500"
+                            : "text-zinc-500"
                     )}
                 >
                     <ChevronDown className="h-4 w-4" />
@@ -107,7 +107,7 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
                                     duration: 0.3,
                                     ease: "easeOut",
                                 }}
-                                className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed"
+                                className="text-sm text-zinc-400 leading-relaxed"
                             >
                                 {answer}
                             </motion.p>

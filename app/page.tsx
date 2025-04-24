@@ -41,7 +41,7 @@ export default function Home() {
         fill="white"
       />
       <div className="z-10 mx-auto pt-20 md:pt-0 md:pb-30 flex flex-col">
-        <h1 className="bg-opacity-50 bg-gradient-to-r from-zinc-100 via-zinc-500 to-zinc-100 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
+        <h1 className="bg-opacity-50 bg-gradient-to-r from-zinc-100 via-zinc-400 to-zinc-100 opacity-85 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
           You keep selling, <br /> we do the rest.
         </h1>
         <p className="mx-auto mt-4 max-w-[26rem] md:max-w-lg text-center text-lg font-normal text-zinc-400">
