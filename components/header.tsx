@@ -54,9 +54,9 @@ const HeaderContent = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-10 left-0 w-[20rem] md:w-[30rem] lg:w-[40rem] bg-zinc-950 rounded-xl shadow-2xl border border-zinc-800 p-5 z-50"
+                  className="absolute top-10 left-0 w-[18rem] md:w-[24rem] xl:w-[40rem] bg-zinc-950 rounded-xl shadow-2xl border border-zinc-800 p-5 z-50"
                 >
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 xl:grid-cols-3 gap-4">
                     {/* VIP Solution */}
                     <a
                       href="/solution1"
@@ -64,7 +64,7 @@ const HeaderContent = () => {
                     >
                       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 via-blue-900/30 to-blue-500/30 opacity-80 hover:opacity-100 transition-opacity duration-200" />
                       <div className="flex items-start gap-3 relative z-10">
-                        <Star className="w-7 h-7 text-zinc-400 group-hover:text-zinc-300" />
+                        <Star className="w-7 h-7 md:w-5 xl:w-4" />
                         <div>
                           <h2 className="text-md font-semibold text-zinc-200">
                             Premium Solution
@@ -79,10 +79,10 @@ const HeaderContent = () => {
                       </div>
                     </a>
                     {/* Secondary Solutions */}
-                    <div className="col-span-1 flex flex-col gap-3">
+                    <div className="col-span-1 flex flex-col gap-3 w-[15.3rem] md:w-[21rem] xl:w-auto">
                       <a
                         href="/solution2"
-                        className="p-3 bg-zinc-900/50 hover:bg-zinc-800 rounded-lg transition duration-200 group"
+                        className="p-3 bg-gradient-to-br from-zinc-500/10 via-zinc-950 to-zinc-500/10 hover:bg-zinc-900 border-zinc-700/30 border-2 rounded-lg transition duration-200 group"
                       >
                         <div className="flex items-start gap-2">
                           <div>
@@ -97,7 +97,7 @@ const HeaderContent = () => {
                       </a>
                       <a
                         href="/solution3"
-                        className="p-3 bg-zinc-900/50 hover:bg-zinc-800 rounded-lg transition duration-200 group"
+                        className="p-3 bg-gradient-to-br from-zinc-500/10 via-zinc-950 to-zinc-500/10 hover:bg-zinc-900 border-zinc-700/30 border-2 rounded-lg transition duration-200 group"
                       >
                         <div className="flex items-start gap-2">
                           <div>
