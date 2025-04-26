@@ -79,7 +79,7 @@ const HeaderContent = () => {
                       </div>
                     </a>
                     {/* Secondary Solutions */}
-                    <div className="col-span-1 flex flex-col gap-3 w-[15.3rem] md:w-[21rem] xl:w-auto">
+                    <div className="col-span-1 flex flex-col gap-3 w-[15.5rem] md:w-[21.5rem] xl:w-auto">
                       <a
                         href="/solution2"
                         className="p-3 bg-gradient-to-br from-zinc-500/10 via-zinc-950 to-zinc-500/10 hover:bg-zinc-900 border-zinc-700/30 border-2 rounded-lg transition duration-200 group"
