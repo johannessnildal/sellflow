@@ -44,13 +44,16 @@ export default function Home() {
         fill="white"
       />
       <div className="z-10 mx-auto pt-20 md:pt-0 md:pb-30 flex flex-col gap-6">
-        <h1 className="bg-gradient-to-r from-zinc-100 via-zinc-400 to-zinc-100 bg-clip-text text-center text-5xl font-bold text-transparent md:text-7xl">
+        <h1 className="bg-gradient-to-r from-zinc-100 via-zinc-300 to-zinc-100 bg-clip-text text-center text-5xl font-bold text-transparent md:text-7xl">
           You keep selling <br /> <AuroraText className="mt-2">we do the rest.</AuroraText>
         </h1>
         <p className="mx-auto mt-6 max-w-[26rem] md:max-w-[32rem] lg:max-w-[40rem] xl:max-w-[46rem] text-center text-md md:text-lg xl:text-xl font-normal text-zinc-300">
           Automate and empower your small online business customer relations with ease and speed. Our tools help you save time, so that you can focus on what really matters - Selling!
         </p>
-        <Link href="/" className="mx-auto"><Button className="w-[10rem] h-[2.8rem] mt-14 hover:cursor-pointer" variant='default'>Get Started</Button></Link>
+        <div className="flex flex-row gap-4 w-auto mx-auto">
+        <Link href="/" className="mx-auto"><Button className="w-[9rem] h-[2.5rem] mt-14 hover:cursor-pointer" variant='default'>Get Started</Button></Link>
+        <Link href="/" className="mx-auto"><Button className="w-[9rem] h-[2.5rem] mt-14 hover:cursor-pointer" variant='outline'>Log In</Button></Link>
+        </div>
       </div>
     </div>
     

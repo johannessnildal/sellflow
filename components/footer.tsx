@@ -103,8 +103,6 @@ const Footer = () => {
                 key={social.label}
                 href={social.href}
                 aria-label={social.label}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
                 className="text-zinc-400 hover:text-zinc-100 transition duration-200"
               >
                 <social.Icon className="w-5 h-5" />
@@ -115,7 +113,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="mt-8 pt-8 border-t border-t-zinc-900 border-zinc-800 text-center w-[50vw] mx-auto">
+      <div className="mt-8 pt-8 border-t border-t-zinc-900 border-zinc-800 text-center w-[40vw] mx-auto">
         <p className="text-sm text-zinc-500">
           © {new Date().getFullYear()} Sellflow. All rights reserved.
         </p>
