@@ -53,14 +53,14 @@ export default function Home() {
         <p className="mx-auto mt-2 max-w-[24rem] md:max-w-[32rem] lg:max-w-[40rem] xl:max-w-[46rem] text-center text-sm sm:text-md md:text-lg xl:text-xl font-normal bg-gradient-to-br from-zinc-200 via-zinc-400 to-zinc-200 bg-clip-text text-transparent">
           Automate and simplify the tedious parts of your business <br /> so you can focus on the really important stuff.
         </p>
-        <div className="flex flex-row gap-4 w-auto mx-auto">
+        <div className="flex flex-row gap-4 w-auto mx-auto -mt-4 sm:mt-0">
         <Link href="/" className="mx-auto"><Button className="w-[9rem] md:w-[12rem] h-[2.5rem] md:h-[2.7rem] mt-14 hover:cursor-pointer">Get Started</Button></Link>
         <Link href="/" className="mx-auto"><Button className="w-[7rem] md:w-[9rem] h-[2.5rem] md:h-[2.7rem] mt-14 hover:cursor-pointer text-zinc-100/50" variant='outline'>Log In</Button></Link>
         </div>
       </div>
     </div>
     
-    <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16 mt-20 md:mt-2">
+    <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16">
       <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
         <GridItem
           area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
