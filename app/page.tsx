@@ -44,13 +44,13 @@ export default function Home() {
         fill="white"
       />
       <div className="z-10 mx-auto pt-20 md:pt-0 md:pb-30 flex flex-col gap-6">
-        <h1 className="bg-gradient-to-tl from-zinc-100 via-zinc-100 to-zinc-500 bg-clip-text text-center text-3xl font-bold text-transparent md:text-5xl lg:text-7xl">
+        <h1 className="bg-gradient-to-tl from-zinc-100 via-zinc-100 to-zinc-500 bg-clip-text text-center font-bold text-transparent text-2xl sm:text-3xl md:text-5xl lg:text-7xl">
           Scale your business
         </h1>
-        <h1 className="bg-gradient-to-br from-zinc-100 via-zinc-100 to-zinc-500 -mt-4 md:mt-0 bg-clip-text text-center text-3xl font-bold text-transparent md:text-5xl lg:text-7xl">
+        <h1 className="bg-gradient-to-br from-zinc-100 via-zinc-100 to-zinc-500 -mt-4 md:mt-0 bg-clip-text text-center font-bold text-transparent text-2xl sm:text-3xl md:text-5xl lg:text-7xl">
           effortlessly & lightning-fast
         </h1>
-        <p className="mx-auto mt-2 max-w-[28rem] md:max-w-[32rem] lg:max-w-[40rem] xl:max-w-[46rem] text-center text-md md:text-lg xl:text-xl font-normal bg-gradient-to-br from-zinc-200 via-zinc-400 to-zinc-200 bg-clip-text text-transparent">
+        <p className="mx-auto mt-2 max-w-[24rem] md:max-w-[32rem] lg:max-w-[40rem] xl:max-w-[46rem] text-center text-sm sm:text-md md:text-lg xl:text-xl font-normal bg-gradient-to-br from-zinc-200 via-zinc-400 to-zinc-200 bg-clip-text text-transparent">
           Automate and simplify the tedious parts of your business <br /> so you can focus on the really important stuff.
         </p>
         <div className="flex flex-row gap-4 w-auto mx-auto">
