@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SellFlow - Business automation for small sellers",
+  title: "SellFlow - Automation for small sellers",
   description: "Automation and smart solutions for small-scale sellers with seamless scaling.",
 };
 

@@ -58,9 +58,9 @@ const HeaderContent = () => {
                     {/* VIP Solution */}
                     <Link
                       href="/solution1"
-                      className="col-span-2 p-4 bg-zinc-900 rounded-lg hover:bg-zinc-800 transition duration-200 relative overflow-hidden border border-blue-400/60"
+                      className="col-span-2 p-4 bg-zinc-900 rounded-lg hover:bg-zinc-800 transition duration-200 relative overflow-hidden border border-zinc-400/60"
                     >
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 via-blue-900/30 to-blue-500/30 opacity-80 hover:opacity-100 transition-opacity duration-200" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-zinc-500/30 via-zinc-900/30 to-zinc-500/30 opacity-80 hover:opacity-100 transition-opacity duration-200" />
                       <div className="flex items-start gap-3 relative z-10">
                         <Star className="w-7 h-7 md:w-5 xl:w-4" />
                         <div>

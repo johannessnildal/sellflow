@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Facebook, Instagram, Mail, } from "lucide-react";
+import { Facebook, Heart, Instagram, Mail, } from "lucide-react";
 import Link from "next/link";
 
 const Footer = () => {
@@ -38,7 +38,7 @@ const Footer = () => {
             />
           </Link>
           <p className="text-sm text-zinc-500 max-w-[14rem]">
-            Empowering small businesses with seamless solutions. <br /> <br /> <span className="hidden md:block"> Made with ❤️ in Norway. </span>
+            Empowering small businesses with seamless solutions. <br /> <br /> <span className="hidden md:block"> Made with <Heart className="w-3 text-zinc-400 inline-block mx-[2px]"/> in Norway. </span>
           </p>
         </div>
 
@@ -105,7 +105,7 @@ const Footer = () => {
                 aria-label={social.label}
                 className="text-zinc-400 hover:text-zinc-100 transition duration-200"
               >
-                <social.Icon className="w-5 h-5" />
+                <social.Icon className="w-4 h-4 mt-6" />
               </motion.a>
             ))}
           </div>
