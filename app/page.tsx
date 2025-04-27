@@ -93,7 +93,7 @@ export default function Home() {
       </ul>
     </div>
 
-    <div className="-mt-[24rem] -mb-[24rem]">
+    <div className="-mt-[24rem] -mb-[19rem]">
       <TextReveal>Redefine automation. Triple your work speed.</TextReveal>
     </div>
 
