@@ -177,7 +177,7 @@ function Faq02() {
                         Still have questions?
                     </p>
                     <p className="text-sm text-zinc-400 mb-4">
-                        We're here to assist you
+                        We are here to assist you
                     </p>
                     <a href="mailto:">
                         <Button className="hover:cursor-pointer">Contact Us</Button>

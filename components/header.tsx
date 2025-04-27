@@ -4,16 +4,13 @@ import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-
 import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Menu, ChevronDown, Star, Zap, Shield } from "lucide-react";
+import { Menu, ChevronDown, Star, } from "lucide-react";
 import {
   Sheet,
-  SheetClose,
   SheetContent,
-  SheetDescription,
   SheetFooter,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
+  SheetTitle,
 } from "@/components/ui/sheet";
 import Link from "next/link";
 
