@@ -51,8 +51,8 @@ export default function Home() {
           Automate and empower your small online business customer relations with ease and speed. Our tools help you save time, so that you can focus on what really matters - Selling!
         </p>
         <div className="flex flex-row gap-4 w-auto mx-auto">
-        <Link href="/" className="mx-auto"><Button className="w-[9rem] h-[2.5rem] mt-14 hover:cursor-pointer" variant='default'>Get Started</Button></Link>
-        <Link href="/" className="mx-auto"><Button className="w-[9rem] h-[2.5rem] mt-14 hover:cursor-pointer" variant='outline'>Log In</Button></Link>
+        <Link href="/" className="mx-auto"><Button className="w-[7rem] md:w-[9rem] h-[2.3rem] md:h-[2.5rem] mt-14 hover:cursor-pointer" variant='default'>Get Started</Button></Link>
+        <Link href="/" className="mx-auto"><Button className="w-[7rem] md:w-[9rem] h-[2.3rem] md:h-[2.5rem] mt-14 hover:cursor-pointer" variant='outline'>Log In</Button></Link>
         </div>
       </div>
     </div>
