@@ -15,6 +15,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import Link from "next/link";
 
 const HeaderContent = () => {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -22,7 +23,7 @@ const HeaderContent = () => {
   return (
     <div className="flex items-center gap-10 lg:gap-20 justify-between">
       <div>
-        <a href="/">
+        <Link href="/">
           <Image
             src="logo/white.svg"
             width="130"
@@ -30,7 +31,7 @@ const HeaderContent = () => {
             alt="logo"
             className="hover:animate-pulse"
           ></Image>
-        </a>
+        </Link>
       </div>
       <div className="hidden sm:block">
         <ul className="flex flex-row gap-10">
@@ -58,7 +59,7 @@ const HeaderContent = () => {
                 >
                   <div className="grid grid-cols-1 xl:grid-cols-3 gap-4">
                     {/* VIP Solution */}
-                    <a
+                    <Link
                       href="/solution1"
                       className="col-span-2 p-4 bg-zinc-900 rounded-lg hover:bg-zinc-800 transition duration-200 relative overflow-hidden border border-blue-400/60"
                     >
@@ -74,10 +75,10 @@ const HeaderContent = () => {
                           </p>
                         </div>
                       </div>
-                    </a>
+                    </Link>
                     {/* Secondary Solutions */}
                     <div className="col-span-1 flex flex-col gap-3 w-[15.5rem] md:w-[21.5rem] xl:w-auto">
-                      <a
+                      <Link
                         href="/solution2"
                         className="p-3 bg-gradient-to-br from-zinc-500/10 via-zinc-950 to-zinc-500/10 hover:bg-zinc-900 border-zinc-700/30 border-2 rounded-lg transition duration-200 group"
                       >
@@ -91,8 +92,8 @@ const HeaderContent = () => {
                             </p>
                           </div>
                         </div>
-                      </a>
-                      <a
+                      </Link>
+                      <Link
                         href="/solution3"
                         className="p-3 bg-gradient-to-br from-zinc-500/10 via-zinc-950 to-zinc-500/10 hover:bg-zinc-900 border-zinc-700/30 border-2 rounded-lg transition duration-200 group"
                       >
@@ -106,7 +107,7 @@ const HeaderContent = () => {
                             </p>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </motion.div>
@@ -114,13 +115,13 @@ const HeaderContent = () => {
             </AnimatePresence>
           </li>
           <li className="hover:underline underline-offset-4 decoration-2 decoration-zinc-700 text-zinc-300 hover:text-zinc-100 transition ease-in-out duration-75 text-md">
-            <a href="OK">Features</a>
+            <Link href="OK">Features</Link>
           </li>
           <li className="hover:underline underline-offset-4 decoration-2 decoration-zinc-700 text-zinc-300 hover:text-zinc-100 transition ease-in-out duration-75 text-md">
-            <a href="OK">Pricing</a>
+            <Link href="OK">Pricing</Link>
           </li>
           <li className="hover:underline underline-offset-4 decoration-2 decoration-zinc-700 text-zinc-300 hover:text-zinc-100 transition ease-in-out duration-75 text-md hidden md:block">
-            <a href="OK">Contact</a>
+            <Link href="OK">Contact</Link>
           </li>
         </ul>
       </div>
@@ -140,7 +141,8 @@ const HeaderContent = () => {
                 </Button>
               </SheetTrigger>
               <SheetContent>
-                <div className="grid gap-4 py-4"></div>
+                <SheetTitle>Placeholder</SheetTitle>
+                <div className="grid gap-4 py-4">Placeholder</div>
                 <SheetFooter></SheetFooter>
               </SheetContent>
             </Sheet>

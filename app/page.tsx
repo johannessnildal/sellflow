@@ -10,6 +10,7 @@ import { motion } from 'framer-motion';
 import Faq02 from "@/components/kokonutui/faq-02";
 import { AuroraText } from "@/components/magicui/aurora-text";
 import { TextReveal } from "@/components/magicui/text-reveal";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -49,7 +50,7 @@ export default function Home() {
         <p className="mx-auto mt-6 max-w-[26rem] md:max-w-[32rem] lg:max-w-[40rem] xl:max-w-[46rem] text-center text-md md:text-lg xl:text-xl font-normal text-zinc-300">
           Automate and empower your small online business customer relations with ease and speed. Our tools help you save time, so that you can focus on what really matters - Selling!
         </p>
-        <a href="/" className="mx-auto"><Button className="w-[10rem] h-[2.8rem] mt-14 hover:cursor-pointer" variant='default'>Get Started</Button></a>
+        <Link href="/" className="mx-auto"><Button className="w-[10rem] h-[2.8rem] mt-14 hover:cursor-pointer" variant='default'>Get Started</Button></Link>
       </div>
     </div>
     
@@ -95,7 +96,7 @@ export default function Home() {
     <div className="-mt-[24rem] -mb-[24rem]">
       <TextReveal>Redefine automation. Triple your work speed.</TextReveal>
     </div>
-    
+
     <div className="pt-14 md:pt-28">
       <Faq02 />
     </div>
