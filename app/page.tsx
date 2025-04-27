@@ -2,12 +2,14 @@
 
 import { Spotlight } from "@/components/ui/spotlight";
 import { cn } from "@/lib/utils";
-import { Box, Lock, Scaling, Search, Settings, Sparkles, TrendingUpDown } from "lucide-react";
+import { Box, Lock, Settings, Sparkles, TrendingUpDown } from "lucide-react";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { Button } from "@/components/ui/button";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { motion } from 'framer-motion';
 import Faq02 from "@/components/kokonutui/faq-02";
+import { AuroraText } from "@/components/magicui/aurora-text";
+import { TextReveal } from "@/components/magicui/text-reveal";
 
 export default function Home() {
   return (
@@ -27,11 +29,11 @@ export default function Home() {
       />
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-transparent to-zinc-950" style={{ backgroundPosition: '0% 70%' }} />
       
-      <div className="absolute flex justify-center text-center top-10">
+      <div className="absolute flex justify-center text-center top-10 opacity-50">
       <HoverBorderGradient
         containerClassName=""
         as="button"
-        className="bg-zinc-950 text-zinc-400 items-center space-x-2 hidden md:block"
+        className="bg-zinc-950 text-zinc-400 items-center hidden md:block text-sm"
       >
         <span>We only support Etsy for now - More coming!</span>
       </HoverBorderGradient>
@@ -40,18 +42,18 @@ export default function Home() {
         className="-top-40 left-0 md:-top-20 md:left-60"
         fill="white"
       />
-      <div className="z-10 mx-auto pt-20 md:pt-0 md:pb-30 flex flex-col">
-        <h1 className="bg-opacity-50 bg-gradient-to-r from-zinc-100 via-zinc-400 to-zinc-100 opacity-85 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
-          You keep selling, <br /> we do the rest.
+      <div className="z-10 mx-auto pt-20 md:pt-0 md:pb-30 flex flex-col gap-6">
+        <h1 className="bg-gradient-to-r from-zinc-100 via-zinc-400 to-zinc-100 bg-clip-text text-center text-5xl font-bold text-transparent md:text-7xl">
+          You keep selling <br /> <AuroraText className="mt-2">we do the rest.</AuroraText>
         </h1>
-        <p className="mx-auto mt-4 max-w-[26rem] md:max-w-lg text-center text-lg font-normal text-zinc-400">
+        <p className="mx-auto mt-6 max-w-[26rem] md:max-w-[32rem] lg:max-w-[40rem] xl:max-w-[46rem] text-center text-md md:text-lg xl:text-xl font-normal text-zinc-300">
           Automate and empower your small online business customer relations with ease and speed. Our tools help you save time, so that you can focus on what really matters - Selling!
         </p>
         <a href="/" className="mx-auto"><Button className="w-[10rem] h-[2.8rem] mt-14 hover:cursor-pointer" variant='default'>Get Started</Button></a>
       </div>
     </div>
     
-    <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16 md:-mt-10">
+    <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16 mt-20 md:-mt-10">
       <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
         <GridItem
           area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
@@ -89,6 +91,11 @@ export default function Home() {
         />
       </ul>
     </div>
+
+    <div className="-mt-[24rem] -mb-[24rem]">
+      <TextReveal>Redefine automation. Triple your work speed.</TextReveal>
+    </div>
+    
     <div className="pt-14 md:pt-28">
       <Faq02 />
     </div>

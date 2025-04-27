@@ -72,9 +72,6 @@ const HeaderContent = () => {
                           <p className="text-xs text-zinc-500 mt-2 font-medium">
                             Our flagship solution with advanced features for maximum impact.
                           </p>
-                          <span className="text-xs text-zinc-500 mt-3 block font-medium hover:text-zinc-400 transition-colors">
-                            Learn More
-                          </span>
                         </div>
                       </div>
                     </a>
