@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Facebook, Heart, Instagram, Mail, } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   const navLinks = [
@@ -31,7 +32,7 @@ const Footer = () => {
         {/* Brand Section */}
         <div className="flex flex-col gap-4 items-center md:items-start">
           <Link href="/">
-            <img
+            <Image
               src="/logo/white.svg"
               alt="Sellflow Logo"
               className="w-32 hover:animate-pulse"
