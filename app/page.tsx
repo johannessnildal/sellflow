@@ -31,12 +31,24 @@ export default function Home() {
       <div className="absolute inset-0 z-0 pointer-events-none bg-radial from-transparent via-zinc-900 to-zinc-950" style={{ backgroundPosition: '0% 70%' }} />
       <div className="absolute inset-0 z-0 pointer-events-none bg-radial from-transparent via-zinc-950/10 to-zinc-800/20" style={{ backgroundPosition: '0% 70%' }} />
 
+      <motion.div
+      initial={{ scale: 0.8, opacity: 0 }}
+      animate={{ scale: 1.2, opacity: 0.3 }}
+      transition={{
+        delay: 2,
+        duration: 1,
+        ease: 'easeOut',
+      }}
+      className="absolute pointer-events-none w-full h-full"
+    >
       <DotLottieReact
-      src="https://lottie.host/3e45ba84-90f6-477d-80f0-becbf8c052b0/mtgyZmco2H.lottie"
-      loop
-      autoplay
-      className="absolute pointer-events-none w-full h-full opacity-30"
+        src="https://lottie.host/3e45ba84-90f6-477d-80f0-becbf8c052b0/mtgyZmco2H.lottie"
+        loop
+        autoplay
+        className="w-full h-full"
       />
+    </motion.div>
+      
       <div className="absolute flex justify-center text-center top-10 opacity-50">
         <HoverBorderGradient
           containerClassName=""
