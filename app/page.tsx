@@ -9,6 +9,7 @@ import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { motion } from 'framer-motion';
 import Faq02 from "@/components/kokonutui/faq-02";
 import Link from "next/link";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export default function Home() {
   return (
@@ -28,8 +29,14 @@ export default function Home() {
       />
       <div className="absolute inset-0 z-1 pointer-events-none bg-gradient-to-b from-transparent via-transparent to-zinc-950" style={{ backgroundPosition: '0% 70%' }}></div>
       <div className="absolute inset-0 z-0 pointer-events-none bg-radial from-transparent via-zinc-900 to-zinc-950" style={{ backgroundPosition: '0% 70%' }} />
-      <div className="absolute inset-0 z-0 pointer-events-none bg-radial from-transparent via-zinc-700/20 to-zinc-800/20" style={{ backgroundPosition: '0% 70%' }} />
-      
+      <div className="absolute inset-0 z-0 pointer-events-none bg-radial from-transparent via-zinc-950/10 to-zinc-800/20" style={{ backgroundPosition: '0% 70%' }} />
+
+      <DotLottieReact
+      src="https://lottie.host/3e45ba84-90f6-477d-80f0-becbf8c052b0/mtgyZmco2H.lottie"
+      loop
+      autoplay
+      className="absolute pointer-events-none w-full h-full opacity-30"
+      />
       <div className="absolute flex justify-center text-center top-10 opacity-50">
         <HoverBorderGradient
           containerClassName=""
@@ -50,12 +57,13 @@ export default function Home() {
         <h1 className="bg-gradient-to-br from-zinc-100 via-zinc-100 to-zinc-500 -mt-4 md:mt-0 bg-clip-text text-center font-bold text-transparent text-2xl sm:text-3xl md:text-5xl lg:text-7xl">
           effortlessly & lightning-fast
         </h1>
-        <p className="mx-auto mt-2 max-w-[24rem] md:max-w-[32rem] lg:max-w-[40rem] xl:max-w-[46rem] text-center text-sm sm:text-md md:text-lg xl:text-xl font-normal bg-gradient-to-br from-zinc-200 via-zinc-400 to-zinc-200 bg-clip-text text-transparent">
+        <p className="mx-auto -mt-2 md:mt-2 max-w-[24rem] md:max-w-[32rem] lg:max-w-[40rem] xl:max-w-[46rem] text-center text-sm sm:text-md md:text-lg xl:text-xl font-normal bg-gradient-to-br from-zinc-200 via-zinc-400 to-zinc-200 bg-clip-text text-transparent">
           Automate and simplify the tedious parts of your business <br /> so you can focus on the really important stuff.
         </p>
-        <div className="flex flex-row gap-4 w-auto mx-auto -mt-4 sm:mt-0">
-        <Link href="/" className="mx-auto"><Button className="w-[9rem] md:w-[12rem] h-[2.5rem] md:h-[2.7rem] mt-14 hover:cursor-pointer">Get Started</Button></Link>
-        <Link href="/" className="mx-auto"><Button className="w-[7rem] md:w-[9rem] h-[2.5rem] md:h-[2.7rem] mt-14 hover:cursor-pointer text-zinc-100/50" variant='outline'>Log In</Button></Link>
+        <div className="flex flex-row gap-6 w-auto mx-auto mt-8 sm:mt-12 items-center">
+          <Link href="/" className="mx-auto"><Button className="w-[9rem] md:w-[12rem] h-[2.5rem] md:h-[2.7rem] hover:cursor-pointer">Get Started</Button></Link>
+          <p className="text-sm md:text-lg text-zinc-500 font-light">or</p>
+          <Link href="/" className="mx-auto"><Button className="w-[7rem] md:w-[9rem] h-[2.5rem] md:h-[2.7rem] hover:cursor-pointer text-zinc-100/50" variant='outline'>Log In</Button></Link>
         </div>
       </div>
     </div>
