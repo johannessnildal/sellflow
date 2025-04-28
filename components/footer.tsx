@@ -35,7 +35,9 @@ const Footer = () => {
             <Image
               src="/logo/white.svg"
               alt="Sellflow Logo"
-              className="w-32 hover:animate-pulse"
+              className="hover:animate-pulse"
+              width="130"
+              height="32"
             />
           </Link>
           <p className="text-sm text-zinc-500 max-w-[14rem]">

@@ -39,13 +39,13 @@ export default function Home() {
         duration: 1,
         ease: 'easeOut',
       }}
-      className="absolute pointer-events-none w-full h-full"
+      className="absolute pointer-events-none z-0 flex items-center justify-center w-full h-full"
     >
       <DotLottieReact
         src="https://lottie.host/3e45ba84-90f6-477d-80f0-becbf8c052b0/mtgyZmco2H.lottie"
         loop
         autoplay
-        className="w-full h-full"
+        className="w-[25rem] sm:w-[30rem] md:w-[45rem] lg:w-[50rem] h-auto"
       />
     </motion.div>
       
