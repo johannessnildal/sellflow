@@ -27,27 +27,27 @@ export default function Home() {
           "[background-image:linear-gradient(to_right,#171717_1px,transparent_1px),linear-gradient(to_bottom,#171717_1px,transparent_1px)]",
         )}
       />
-      <div className="absolute inset-0 z-1 pointer-events-none bg-gradient-to-b from-transparent via-transparent to-zinc-950" style={{ backgroundPosition: '0% 70%' }}></div>
-      <div className="absolute inset-0 z-0 pointer-events-none bg-radial from-transparent via-zinc-900 to-zinc-950" style={{ backgroundPosition: '0% 70%' }} />
-      <div className="absolute inset-0 z-0 pointer-events-none bg-radial from-transparent via-zinc-950/10 to-zinc-800/20" style={{ backgroundPosition: '0% 70%' }} />
+      <div className="absolute inset-0 z-1 bg-gradient-to-b from-transparent via-transparent to-zinc-950" style={{ backgroundPosition: '0% 70%' }}></div>
+      <div className="absolute inset-0 z-0 bg-radial from-transparent via-zinc-900 to-zinc-950" style={{ backgroundPosition: '0% 70%' }} />
+      <div className="absolute inset-0 z-0 bg-radial from-transparent via-zinc-950/10 to-zinc-800/20" style={{ backgroundPosition: '0% 70%' }} />
 
       <motion.div
-      initial={{ scale: 0.8, opacity: 0 }}
-      animate={{ scale: 1.8, opacity: 0.3 }}
-      transition={{
-        delay: 2,
-        duration: 1,
-        ease: 'easeOut',
-      }}
-      className="absolute pointer-events-none z-0 flex items-center justify-center w-full h-full"
-    >
-      <DotLottieReact
-        src="https://lottie.host/3e45ba84-90f6-477d-80f0-becbf8c052b0/mtgyZmco2H.lottie"
-        loop
-        autoplay
-        className="w-auto h-auto"
-      />
-    </motion.div>
+  initial={{ scale: 2, opacity: 0 }}
+  animate={{ scale: 3, opacity: 0.2 }}
+  transition={{
+    delay: 2,
+    duration: 1,
+    ease: 'easeOut',
+  }}
+  className="absolute z-0 w-full h-auto flex justify-center items-center top-30 md:top-50"
+>
+  <DotLottieReact
+    src="https://lottie.host/3e45ba84-90f6-477d-80f0-becbf8c052b0/mtgyZmco2H.lottie"
+    loop
+    autoplay
+    className="w-[80vw] sm:w-[70vw] lg:w-[60vw] max-w-[50rem] h-auto"
+  />
+</motion.div>
       
       <div className="absolute flex justify-center text-center top-10 opacity-50">
         <HoverBorderGradient
@@ -62,7 +62,7 @@ export default function Home() {
         className="-top-40 left-0 md:-top-20 md:left-60"
         fill="white"
       />
-      <div className="z-10 mx-auto pt-20 md:pt-0 md:pb-30 flex flex-col gap-6">
+      <div className="z-10 mx-auto mt-20 md:-mt-40 lg:-mt-20 flex flex-col gap-6">
         <h1 className="bg-gradient-to-tl from-zinc-100 via-zinc-100 to-zinc-500 bg-clip-text text-center font-bold text-transparent text-2xl sm:text-3xl md:text-5xl lg:text-7xl">
           Scale your business
         </h1>
