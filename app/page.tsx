@@ -33,7 +33,7 @@ export default function Home() {
 
       <motion.div
       initial={{ scale: 0.8, opacity: 0 }}
-      animate={{ scale: 1.2, opacity: 0.3 }}
+      animate={{ scale: 1.8, opacity: 0.3 }}
       transition={{
         delay: 2,
         duration: 1,
@@ -45,7 +45,7 @@ export default function Home() {
         src="https://lottie.host/3e45ba84-90f6-477d-80f0-becbf8c052b0/mtgyZmco2H.lottie"
         loop
         autoplay
-        className="w-[25rem] sm:w-[30rem] md:w-[45rem] lg:w-[50rem] h-auto"
+        className="w-auto h-auto"
       />
     </motion.div>
       
