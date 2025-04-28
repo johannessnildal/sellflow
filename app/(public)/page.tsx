@@ -13,12 +13,13 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export default function Home() {
   return (
-    <motion.div
+  <motion.div
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
     transition={{ duration: 0.5 }}
   >
+  
   <main className="bg-zinc-950 antialiased">
     <div className="relative flex h-[30rem] md:h-[50rem] w-full overflow-hidden rounded-md bg-zinc-950 antialiased md:items-center md:justify-center">
       <div
@@ -32,22 +33,23 @@ export default function Home() {
       <div className="absolute inset-0 z-0 bg-radial from-transparent via-zinc-950/10 to-zinc-800/20" style={{ backgroundPosition: '0% 70%' }} />
 
       <motion.div
-  initial={{ scale: 2, opacity: 0 }}
-  animate={{ scale: 3, opacity: 0.2 }}
-  transition={{
-    delay: 2,
-    duration: 1,
-    ease: 'easeOut',
-  }}
-  className="absolute z-0 w-full h-auto flex justify-center items-center top-30 md:top-50"
->
-  <DotLottieReact
-    src="https://lottie.host/3e45ba84-90f6-477d-80f0-becbf8c052b0/mtgyZmco2H.lottie"
-    loop
-    autoplay
-    className="w-[80vw] sm:w-[70vw] lg:w-[60vw] max-w-[50rem] h-auto"
-  />
-</motion.div>
+        initial={{ scale: 2, opacity: 0 }}
+        animate={{ scale: 3, opacity: 0.2 }}
+        transition={{
+          delay: 2,
+          duration: 1,
+          ease: 'easeOut',
+        }}
+        className="absolute z-0 w-full h-auto flex justify-center items-center top-30 md:top-50"
+      >
+  
+      <DotLottieReact
+        src="https://lottie.host/3e45ba84-90f6-477d-80f0-becbf8c052b0/mtgyZmco2H.lottie"
+        loop
+        autoplay
+        className="w-[80vw] sm:w-[70vw] lg:w-[60vw] max-w-[50rem] h-auto"
+      />
+      </motion.div>
       
       <div className="absolute flex justify-center text-center top-10 opacity-50">
         <HoverBorderGradient
@@ -58,10 +60,12 @@ export default function Home() {
           <span>We only support Etsy for now - More coming!</span>
         </HoverBorderGradient>
       </div>
+      
       <Spotlight
         className="-top-40 left-0 md:-top-20 md:left-60"
         fill="white"
       />
+
       <div className="z-10 mx-auto mt-20 md:-mt-40 lg:-mt-20 flex flex-col gap-6">
         <h1 className="bg-gradient-to-tl from-zinc-100 via-zinc-100 to-zinc-500 bg-clip-text text-center font-bold text-transparent text-2xl sm:text-3xl md:text-5xl lg:text-7xl">
           Scale your business

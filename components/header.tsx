@@ -30,6 +30,7 @@ const HeaderContent = () => {
           ></Image>
         </Link>
       </div>
+      
       <div className="hidden sm:block">
         <ul className="flex flex-row gap-10">
           <li className="relative">
@@ -122,6 +123,7 @@ const HeaderContent = () => {
           </li>
         </ul>
       </div>
+
       <div className="flex items-center gap-4">
         <div className="hidden lg:block">
           <Button variant="outline" className="hover:cursor-pointer">
