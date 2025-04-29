@@ -4,19 +4,20 @@ import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-
 import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Menu, ChevronDown, Star } from "lucide-react";
+import { Menu, ChevronDown, Star, X } from "lucide-react";
 import {
   Sheet,
   SheetContent,
   SheetFooter,
   SheetTrigger,
   SheetTitle,
+  SheetClose,
 } from "@/components/ui/sheet";
 import Link from "next/link";
 import {
   SignInButton,
+  SignOutButton,
   SignUpButton,
-  UserButton,
   useAuth,
 } from "@clerk/nextjs";
 
@@ -25,12 +26,12 @@ const HeaderContent = () => {
   const { isSignedIn } = useAuth(); // Check if user is logged in
 
   return (
-    <div className="flex items-center gap-10 lg:gap-20 justify-between">
+    <div className="flex items-center gap-10 lg:gap-20 justify-between xl:justify-evenly">
       <div>
         <Link href="/">
           <Image
             src="/logo/white.svg"
-            width="130"
+            width="120"
             height="40"
             alt="logo"
             className="hover:animate-pulse"
@@ -38,8 +39,8 @@ const HeaderContent = () => {
         </Link>
       </div>
 
-      <div className="hidden sm:block">
-        <ul className="flex flex-row gap-10">
+      <div className="hidden md:block">
+        <ul className="flex flex-row gap-10 text-sm">
           <li className="relative">
             <button
               className="flex items-center gap-1 hover:underline underline-offset-4 decoration-2 decoration-zinc-700 text-zinc-300 hover:text-zinc-100 transition ease-in-out duration-75 text-md"
@@ -72,7 +73,7 @@ const HeaderContent = () => {
                       <div className="flex items-start gap-3 relative z-10">
                         <Star className="w-7 h-7 md:w-5 xl:w-4" />
                         <div>
-                          <h2 className="text-md font-semibold text-zinc-200">
+                          <h2 className="text-sm font-semibold text-zinc-200">
                             Premium Solution
                           </h2>
                           <p className="text-xs text-zinc-500 mt-2 font-medium">
@@ -89,7 +90,7 @@ const HeaderContent = () => {
                       >
                         <div className="flex items-start gap-2">
                           <div>
-                            <h2 className="text-sm font-medium text-zinc-200">
+                            <h2 className="text-xs font-medium text-zinc-200">
                               Basic Solution
                             </h2>
                             <p className="text-xs text-zinc-500 mt-1.5 font-medium">
@@ -104,7 +105,7 @@ const HeaderContent = () => {
                       >
                         <div className="flex items-start gap-2">
                           <div>
-                            <h4 className="text-sm font-medium text-zinc-200">
+                            <h4 className="text-xs font-medium text-zinc-200">
                               Pro Solution
                             </h4>
                             <p className="text-xs text-zinc-500 mt-1.5 font-medium">
@@ -125,7 +126,7 @@ const HeaderContent = () => {
           <li className="hover:underline underline-offset-4 decoration-2 decoration-zinc-700 text-zinc-300 hover:text-zinc-100 transition ease-in-out duration-75 text-md">
             <Link href="/pricing">Pricing</Link>
           </li>
-          <li className="hover:underline underline-offset-4 decoration-2 decoration-zinc-700 text-zinc-300 hover:text-zinc-100 transition ease-in-out duration-75 text-md hidden md:block">
+          <li className="hover:underline underline-offset-4 decoration-2 decoration-zinc-700 text-zinc-300 hover:text-zinc-100 transition ease-in-out duration-75 text-md hidden lg:block">
             <Link href="/contact">Contact</Link>
           </li>
         </ul>
@@ -133,14 +134,25 @@ const HeaderContent = () => {
 
       <div className="flex items-center gap-4">
         {isSignedIn ? (
-          <UserButton
-            appearance={{
-              elements: {
-                userButtonAvatarBox: "w-10 h-10", // Match button size
-                userButtonTrigger: "hover:cursor-pointer",
-              },
-            }}
-          />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, ease: 'easeInOut' }}
+        >
+          <div className="flex flex-row">
+            <SignOutButton>
+              <Button className="bg-transparent hover:bg-transparent text-zinc-500 hover:text-zinc-300 font-medium text-sm hover:cursor-pointer hover:underline underline-offset-6 hidden md:block">
+                Sign out
+              </Button>
+            </SignOutButton>
+            <div 
+              className="dark-border-button p-2 hidden md:block"
+              onClick={() => window.location.href = '/dashboard'}
+            >
+              Dashboard
+            </div>
+          </div>
+        </motion.div>
         ) : (
           <>
             <div className="hidden lg:block">
@@ -155,19 +167,50 @@ const HeaderContent = () => {
             </SignUpButton>
           </>
         )}
-        <div className="block sm:hidden">
+        <div className="block md:hidden">
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline">
                 <Menu />
               </Button>
             </SheetTrigger>
-            <SheetContent>
-              <SheetTitle>Menu</SheetTitle>
-              <div className="grid gap-4 py-4">
+            <SheetContent className="w-[300px]">
+              <SheetClose asChild>
+                <div className="absolute top-5 right-6">
+                  <Button className="bg-zinc-800/70 border border-zinc-700 w-6 h-6 hover:bg-zinc-600/70 text-zinc-200 hover:text-zinc-100">
+                    <X />
+                  </Button>
+                </div>
+              </SheetClose>
+              <SheetTitle>
+                <div className="flex items-center justify-left ml-6 w-full h-16 bg-gradient-to-b from-zinc-800/70 to-zinc-950 border-b border-zinc-900">
+                  <Link href="/">
+                    <Image
+                      src="/logo/white.svg"
+                      width="120"
+                      height="40"
+                      alt="logo"
+                      className="hover:animate-pulse"
+                    />
+                  </Link>
+                </div>
+              </SheetTitle>
+              <div className="flex flex-col items-center gap-6 py-8 text-sm text-zinc-300">
                 <Link href="/features">Features</Link>
                 <Link href="/pricing">Pricing</Link>
                 <Link href="/contact">Contact</Link>
+
+                <div className="flex flex-row mt-8">
+                  <Button className="bg-transparent hover:bg-transparent text-zinc-500 hover:text-zinc-300 font-medium text-sm hover:cursor-pointer hover:underline underline-offset-6">
+                    Sign out
+                  </Button>
+                  <div 
+                    className="dark-border-button p-2"
+                    onClick={() => window.location.href = '/dashboard'}
+                  >
+                    Dashboard
+                  </div>
+                </div>
                 {!isSignedIn && (
                   <>
                     <SignInButton>
@@ -179,7 +222,13 @@ const HeaderContent = () => {
                   </>
                 )}
               </div>
-              <SheetFooter></SheetFooter>
+              <SheetFooter>
+                <div className="pt-4 border-t border-t-zinc-900 border-zinc-800 text-center w-[40vw] mx-auto">
+                  <p className="text-xs text-zinc-500">
+                    © {new Date().getFullYear()} Sellflow. All rights reserved.
+                  </p>
+                </div>
+              </SheetFooter>
             </SheetContent>
           </Sheet>
         </div>

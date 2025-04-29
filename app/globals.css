@@ -157,5 +157,9 @@
 }
 
 .dark-border-button {
-  @apply cursor-pointer bg-gradient-to-r from-zinc-800 via-zinc-900 to-zinc-800 border border-zinc-700 text-zinc-300 hover:text-zinc-100 text-sm;
+  @apply cursor-pointer bg-gradient-to-r from-zinc-800 via-zinc-900 to-zinc-800 border border-zinc-700 text-zinc-300 hover:text-zinc-100 text-sm rounded-lg px-3;
+}
+
+.text-metallic {
+  @apply bg-gradient-to-br from-zinc-100 via-zinc-300 to-zinc-950 bg-clip-text text-transparent inline-block;
 }
