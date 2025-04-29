@@ -167,6 +167,8 @@ const HeaderContent = () => {
             </SignUpButton>
           </>
         )}
+
+        {/* Mobile Navbar */}
         <div className="block md:hidden">
           <Sheet>
             <SheetTrigger asChild>
@@ -183,14 +185,14 @@ const HeaderContent = () => {
                 </div>
               </SheetClose>
               <SheetTitle>
-                <div className="flex items-center justify-left ml-6 w-full h-16 bg-gradient-to-b from-zinc-800/70 to-zinc-950 border-b border-zinc-900">
+                <div className="flex items-center justify-left w-full h-16 bg-gradient-to-b from-zinc-800/70 to-zinc-950 border-b border-zinc-900">
                   <Link href="/">
                     <Image
                       src="/logo/white.svg"
                       width="120"
                       height="40"
                       alt="logo"
-                      className="hover:animate-pulse"
+                      className="hover:animate-pulse ml-5"
                     />
                   </Link>
                 </div>
@@ -216,18 +218,20 @@ const HeaderContent = () => {
 
                 {!isSignedIn && (
                   <>
+                  <div className="flex gap-4 mt-8">
                     <SignInButton>
                       <Button variant="outline">Log In</Button>
                     </SignInButton>
                     <SignUpButton>
                       <Button>Sign Up</Button>
                     </SignUpButton>
+                  </div>
                   </>
                 )}
               </div>
 
               <SheetFooter>
-                <div className="pt-4 border-t border-t-zinc-900 border-zinc-800 text-center w-[40vw] mx-auto">
+                <div className="pt-4 border-t border-t-zinc-900 border-zinc-800 text-center mx-auto">
                   <p className="text-xs text-zinc-500">
                     © {new Date().getFullYear()} Sellflow. All rights reserved.
                   </p>
