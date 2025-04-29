@@ -204,9 +204,11 @@ const HeaderContent = () => {
 
                 {isSignedIn && (
                 <div className="flex flex-row mt-8">
-                  <Button className="bg-transparent hover:bg-transparent text-zinc-500 hover:text-zinc-300 font-medium text-sm hover:cursor-pointer hover:underline underline-offset-6">
-                    Sign out
-                  </Button>
+                  <SignOutButton>
+                    <Button className="bg-transparent hover:bg-transparent text-zinc-500 hover:text-zinc-300 font-medium text-sm hover:cursor-pointer hover:underline underline-offset-6">
+                      Sign out
+                    </Button>
+                  </SignOutButton>
                   <div 
                     className="dark-border-button p-2"
                     onClick={() => window.location.href = '/dashboard'}
