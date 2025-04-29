@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Facebook, Heart, Instagram, Mail, } from "lucide-react";
+import { Facebook, Heart, Instagram, } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { SignInButton, SignUpButton } from "@clerk/nextjs";
 
 const Footer = () => {
   const navLinks = [
@@ -89,18 +89,16 @@ const Footer = () => {
 
         {/* Newsletter & Social */}
         <div className="flex flex-col gap-4 items-center md:items-start">
-          <h3 className="text-md font-semibold text-zinc-200">Stay Connected</h3>
+          <h3 className="text-md font-semibold text-zinc-200">Get started</h3>
           <form className="flex gap-2 w-full justify-center md:justify-start">
-            <Input
-              type="email"
-              placeholder="Enter your email"
-              className="bg-zinc-900 border-zinc-700 text-zinc-200 placeholder-zinc-500 max-w-xs"
-            />
-            <Button variant="outline" size="icon">
-              <Mail className="w-4 h-4" />
-            </Button>
+            <SignUpButton>
+              <Button className="w-[5rem] h-[2.2rem] hover:cursor-pointer">Sign Up</Button>
+            </SignUpButton>
+            <SignInButton>
+              <Button className="w-[5rem] h-[2.2rem] hover:cursor-pointer text-zinc-100/50" variant='outline'>Log In</Button>
+            </SignInButton>
           </form>
-          <div className="flex gap-4 justify-center md:justify-start">
+          <div className="flex gap-2 justify-center md:justify-start">
             {socialLinks.map((social) => (
               <motion.a
                 key={social.label}
@@ -108,7 +106,7 @@ const Footer = () => {
                 aria-label={social.label}
                 className="text-zinc-400 hover:text-zinc-100 transition duration-200"
               >
-                <social.Icon className="w-4 h-4 mt-6" />
+                <social.Icon className="w-4 h-4 mt-2" />
               </motion.a>
             ))}
           </div>

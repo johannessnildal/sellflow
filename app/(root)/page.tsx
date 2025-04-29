@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { motion } from 'framer-motion';
 import Faq02 from "@/components/kokonutui/faq-02";
-import Link from "next/link";
+import { SignInButton, SignUpButton } from "@clerk/nextjs";
 
 export default function Home() {
   return (
@@ -50,9 +50,13 @@ export default function Home() {
           Automate and simplify the tedious parts of your business <br /> so you can focus on the really important stuff.
         </p>
         <div className="flex flex-row gap-6 w-auto mx-auto mt-8 sm:mt-12 items-center">
-          <Link href="/" className="mx-auto"><Button className="w-[9rem] md:w-[12rem] h-[2.5rem] md:h-[2.7rem] hover:cursor-pointer">Get Started</Button></Link>
+          <SignUpButton>
+            <Button className="w-[9rem] md:w-[12rem] h-[2.5rem] md:h-[2.7rem] hover:cursor-pointer">Get Started</Button>
+          </SignUpButton>
           <p className="text-sm md:text-lg text-zinc-500 font-light">or</p>
-          <Link href="/" className="mx-auto"><Button className="w-[7rem] md:w-[9rem] h-[2.5rem] md:h-[2.7rem] hover:cursor-pointer text-zinc-100/50" variant='outline'>Log In</Button></Link>
+          <SignInButton>
+            <Button className="w-[7rem] md:w-[9rem] h-[2.5rem] md:h-[2.7rem] hover:cursor-pointer text-zinc-100/50" variant='outline'>Log In</Button>
+          </SignInButton>
         </div>
       </div>
     </div>
