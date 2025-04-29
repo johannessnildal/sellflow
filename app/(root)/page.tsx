@@ -1,7 +1,6 @@
 "use client";
 
 import { Spotlight } from "@/components/ui/spotlight";
-import { cn } from "@/lib/utils";
 import { Box, Lock, Settings, Sparkles, TrendingUpDown } from "lucide-react";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { Button } from "@/components/ui/button";
@@ -9,7 +8,6 @@ import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { motion } from 'framer-motion';
 import Faq02 from "@/components/kokonutui/faq-02";
 import Link from "next/link";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export default function Home() {
   return (
@@ -22,34 +20,9 @@ export default function Home() {
   
   <main className="bg-zinc-950 antialiased">
     <div className="relative flex h-[30rem] md:h-[50rem] w-full overflow-hidden rounded-md bg-zinc-950 antialiased md:items-center md:justify-center">
-      <div
-        className={cn(
-          "pointer-events-none absolute inset-0 [background-size:40px_40px] select-none",
-          "[background-image:linear-gradient(to_right,#171717_1px,transparent_1px),linear-gradient(to_bottom,#171717_1px,transparent_1px)]",
-        )}
-      />
       <div className="absolute inset-0 z-1 bg-gradient-to-b from-transparent via-transparent to-zinc-950" style={{ backgroundPosition: '0% 70%' }}></div>
       <div className="absolute inset-0 z-0 bg-radial from-transparent via-zinc-900 to-zinc-950" style={{ backgroundPosition: '0% 70%' }} />
       <div className="absolute inset-0 z-0 bg-radial from-transparent via-zinc-950/10 to-zinc-800/20" style={{ backgroundPosition: '0% 70%' }} />
-
-      <motion.div
-        initial={{ scale: 2, opacity: 0 }}
-        animate={{ scale: 3, opacity: 0.2 }}
-        transition={{
-          delay: 2,
-          duration: 1,
-          ease: 'easeOut',
-        }}
-        className="absolute z-0 w-full h-auto flex justify-center items-center top-30 md:top-50"
-      >
-  
-      <DotLottieReact
-        src="https://lottie.host/3e45ba84-90f6-477d-80f0-becbf8c052b0/mtgyZmco2H.lottie"
-        loop
-        autoplay
-        className="w-[80vw] sm:w-[70vw] lg:w-[60vw] max-w-[50rem] h-auto"
-      />
-      </motion.div>
       
       <div className="absolute flex justify-center text-center top-10 opacity-50">
         <HoverBorderGradient

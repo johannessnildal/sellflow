@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 const AuthLayout = ({ children }: { children: ReactNode }) => {
     return (
-      <main>
+      <main className='flex justify-center items-center min-h-screen bg-zinc-950'>
         {children}
       </main>
     )
