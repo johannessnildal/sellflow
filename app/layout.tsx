@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 
@@ -25,7 +23,7 @@ export const metadata: Metadata = {
   description: "Automation and smart solutions for small-scale sellers with seamless scaling.",
 };
 
-export default function RootLayout({
+export default function AppLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -38,9 +36,7 @@ export default function RootLayout({
         >
           <SpeedInsights />
           <Analytics />
-          <Header />
             {children}
-          <Footer />
         </body>
       </html>
     </ClerkProvider>
