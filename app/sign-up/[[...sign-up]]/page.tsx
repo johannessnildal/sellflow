@@ -13,7 +13,8 @@ export default function SignInPage() {
             <div className="absolute inset-0 z-1 bg-gradient-to-b from-transparent via-transparent to-zinc-950" style={{ backgroundPosition: '0% 70%' }}></div>
             <div className="absolute inset-0 z-0 bg-radial from-transparent via-zinc-900 to-zinc-950" style={{ backgroundPosition: '0% 70%' }} />
             <div className="absolute inset-0 z-0 bg-radial from-transparent via-zinc-950/10 to-zinc-800/20" style={{ backgroundPosition: '0% 70%' }} />
-      <SignUp />
+      
+      <div className="z-10"><SignUp /></div>
     </div>
   );
 }
