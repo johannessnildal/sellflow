@@ -155,3 +155,7 @@
     transform: translate(-50%, -40%) scale(1);
   }
 }
+
+.dark-border-button {
+  @apply cursor-pointer bg-gradient-to-r from-zinc-800 via-zinc-900 to-zinc-800 border border-zinc-700 text-zinc-300 hover:text-zinc-100 text-sm;
+}

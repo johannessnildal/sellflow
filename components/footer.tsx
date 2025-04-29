@@ -5,7 +5,12 @@ import { Button } from "@/components/ui/button";
 import { Facebook, Heart, Instagram, } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { SignInButton, SignUpButton } from "@clerk/nextjs";
+
+import {
+  SignInButton,
+  SignUpButton,
+  useAuth,
+} from "@clerk/nextjs";
 
 const Footer = () => {
   const navLinks = [
@@ -25,6 +30,8 @@ const Footer = () => {
     { Icon: Facebook, href: "https://facebook.com", label: "Facebook" },
     { Icon: Instagram, href: "https://instagram.com", label: "Instagram" },
   ];
+
+  const { isSignedIn } = useAuth(); // Check if user is logged in
 
   return (
     <footer className="w-full py-12 px-4 sm:px-8 lg:px-16 bg-radial from-zinc-950 to-zinc-900 from-80% border-t border-zinc-800 antialiased">
@@ -90,14 +97,26 @@ const Footer = () => {
         {/* Newsletter & Social */}
         <div className="flex flex-col gap-4 items-center md:items-start">
           <h3 className="text-md font-semibold text-zinc-200">Get started</h3>
-          <form className="flex gap-2 w-full justify-center md:justify-start">
-            <SignUpButton>
-              <Button className="w-[5rem] h-[2.2rem] hover:cursor-pointer">Sign Up</Button>
-            </SignUpButton>
-            <SignInButton>
-              <Button className="w-[5rem] h-[2.2rem] hover:cursor-pointer text-zinc-100/50" variant='outline'>Log In</Button>
-            </SignInButton>
-          </form>
+          <div className="flex gap-2 w-full justify-center md:justify-start">
+            {isSignedIn ? (
+              <Link href="/dashboard">
+                <Button className="dark-border-button">Dashboard</Button>
+              </Link>
+            ) : (
+              <>
+                <div className="hidden lg:block">
+                  <SignInButton>
+                    <Button variant="outline" className="hover:cursor-pointer">
+                      Log In
+                    </Button>
+                  </SignInButton>
+                </div>
+                <SignUpButton>
+                  <Button className="hover:cursor-pointer">Sign Up</Button>
+                </SignUpButton>
+              </>
+            )}
+          </div>
           <div className="flex gap-2 justify-center md:justify-start">
             {socialLinks.map((social) => (
               <motion.a

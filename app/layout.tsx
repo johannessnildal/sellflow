@@ -31,20 +31,14 @@ export default function AppLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider
-      appearance={{
-        baseTheme: dark,
-      }}
-    >
       <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased font-[family-name:var(--font-geist-sans)] dark`}
-        >
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased font-[family-name:var(--font-geist-sans)] dark`}>
+          <ClerkProvider appearance={{ baseTheme: dark, }}>
           <SpeedInsights />
           <Analytics />
             {children}
+          </ClerkProvider>
         </body>
       </html>
-    </ClerkProvider>
   );
 }
