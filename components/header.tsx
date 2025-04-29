@@ -200,7 +200,7 @@ const HeaderContent = () => {
                 <Link href="/pricing">Pricing</Link>
                 <Link href="/contact">Contact</Link>
 
-                {!isSignedIn && (
+                {isSignedIn && (
                 <div className="flex flex-row mt-8">
                   <Button className="bg-transparent hover:bg-transparent text-zinc-500 hover:text-zinc-300 font-medium text-sm hover:cursor-pointer hover:underline underline-offset-6">
                     Sign out
@@ -225,7 +225,7 @@ const HeaderContent = () => {
                   </>
                 )}
               </div>
-              
+
               <SheetFooter>
                 <div className="pt-4 border-t border-t-zinc-900 border-zinc-800 text-center w-[40vw] mx-auto">
                   <p className="text-xs text-zinc-500">
