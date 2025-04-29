@@ -4,7 +4,7 @@ import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-
 import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Menu, ChevronDown, Star, } from "lucide-react";
+import { Menu, ChevronDown, Star } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -13,24 +13,31 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import Link from "next/link";
+import {
+  SignInButton,
+  SignUpButton,
+  UserButton,
+  useAuth,
+} from "@clerk/nextjs";
 
 const HeaderContent = () => {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const { isSignedIn } = useAuth(); // Check if user is logged in
 
   return (
     <div className="flex items-center gap-10 lg:gap-20 justify-between">
       <div>
         <Link href="/">
           <Image
-            src="logo/white.svg"
+            src="/logo/white.svg"
             width="130"
-            height="0"
+            height="40"
             alt="logo"
             className="hover:animate-pulse"
-          ></Image>
+          />
         </Link>
       </div>
-      
+
       <div className="hidden sm:block">
         <ul className="flex flex-row gap-10">
           <li className="relative">
@@ -113,39 +120,68 @@ const HeaderContent = () => {
             </AnimatePresence>
           </li>
           <li className="hover:underline underline-offset-4 decoration-2 decoration-zinc-700 text-zinc-300 hover:text-zinc-100 transition ease-in-out duration-75 text-md">
-            <Link href="OK">Features</Link>
+            <Link href="/features">Features</Link>
           </li>
           <li className="hover:underline underline-offset-4 decoration-2 decoration-zinc-700 text-zinc-300 hover:text-zinc-100 transition ease-in-out duration-75 text-md">
-            <Link href="OK">Pricing</Link>
+            <Link href="/pricing">Pricing</Link>
           </li>
           <li className="hover:underline underline-offset-4 decoration-2 decoration-zinc-700 text-zinc-300 hover:text-zinc-100 transition ease-in-out duration-75 text-md hidden md:block">
-            <Link href="OK">Contact</Link>
+            <Link href="/contact">Contact</Link>
           </li>
         </ul>
       </div>
 
       <div className="flex items-center gap-4">
-        <div className="hidden lg:block">
-          <Button variant="outline" className="hover:cursor-pointer">
-            Log In
-          </Button>
-        </div>
-        <div className="flex flex-row gap-2">
-          <Button className="hover:cursor-pointer">Sign Up</Button>
-          <div className="block sm:hidden">
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="outline">
-                  <Menu />
+        {isSignedIn ? (
+          <UserButton
+            appearance={{
+              elements: {
+                userButtonAvatarBox: "w-10 h-10", // Match button size
+                userButtonTrigger: "hover:cursor-pointer",
+              },
+            }}
+          />
+        ) : (
+          <>
+            <div className="hidden lg:block">
+              <SignInButton>
+                <Button variant="outline" className="hover:cursor-pointer">
+                  Log In
                 </Button>
-              </SheetTrigger>
-              <SheetContent>
-                <SheetTitle>Placeholder</SheetTitle>
-                <div className="grid gap-4 py-4">Placeholder</div>
-                <SheetFooter></SheetFooter>
-              </SheetContent>
-            </Sheet>
-          </div>
+              </SignInButton>
+            </div>
+            <SignUpButton>
+              <Button className="hover:cursor-pointer">Sign Up</Button>
+            </SignUpButton>
+          </>
+        )}
+        <div className="block sm:hidden">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="outline">
+                <Menu />
+              </Button>
+            </SheetTrigger>
+            <SheetContent>
+              <SheetTitle>Menu</SheetTitle>
+              <div className="grid gap-4 py-4">
+                <Link href="/features">Features</Link>
+                <Link href="/pricing">Pricing</Link>
+                <Link href="/contact">Contact</Link>
+                {!isSignedIn && (
+                  <>
+                    <SignInButton>
+                      <Button variant="outline">Log In</Button>
+                    </SignInButton>
+                    <SignUpButton>
+                      <Button>Sign Up</Button>
+                    </SignUpButton>
+                  </>
+                )}
+              </div>
+              <SheetFooter></SheetFooter>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </div>

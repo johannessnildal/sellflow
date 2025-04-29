@@ -8,11 +8,6 @@ import { Analytics } from "@vercel/analytics/react"
 
 import {
   ClerkProvider,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
 } from '@clerk/nextjs'
 
 const geistSans = Geist({
