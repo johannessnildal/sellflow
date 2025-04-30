@@ -176,7 +176,7 @@ const HeaderContent = () => {
                 <Menu />
               </Button>
             </SheetTrigger>
-            <SheetContent className="w-[300px]">
+            <SheetContent className="w-full">
               <SheetClose asChild>
                 <div className="absolute top-5 right-6">
                   <Button className="bg-zinc-800/70 border border-zinc-700 w-6 h-6 hover:bg-zinc-600/70 text-zinc-200 hover:text-zinc-100">
@@ -197,13 +197,13 @@ const HeaderContent = () => {
                   </Link>
                 </div>
               </SheetTitle>
-              <div className="flex flex-col items-center gap-6 py-8 text-sm text-zinc-300">
+              <div className="flex flex-col items-center gap-8 py-12 text-md text-zinc-300">
                 <Link href="/features">Features</Link>
                 <Link href="/pricing">Pricing</Link>
                 <Link href="/contact">Contact</Link>
 
                 {isSignedIn && (
-                <div className="flex flex-row mt-8">
+                <div className="flex flex-row">
                   <SignOutButton>
                     <Button className="bg-transparent hover:bg-transparent text-zinc-500 hover:text-zinc-300 font-medium text-sm hover:cursor-pointer hover:underline underline-offset-6">
                       Sign out

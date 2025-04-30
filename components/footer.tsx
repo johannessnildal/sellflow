@@ -34,7 +34,7 @@ const Footer = () => {
   const { isSignedIn } = useAuth(); // Check if user is logged in
 
   return (
-    <footer className="w-full py-12 px-4 sm:px-8 lg:px-16 bg-radial from-zinc-950 to-zinc-900 from-80% border-t border-zinc-800 antialiased">
+    <footer className="w-full py-12 px-4 sm:px-8 lg:px-16 bg-radial from-zinc-900/50 via-zinc-950 to-zinc-900 border-t border-zinc-800 antialiased">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 place-items-center md:place-items-start text-center md:text-left">
         {/* Brand Section */}
         <div className="flex flex-col gap-4 items-center md:items-start">
