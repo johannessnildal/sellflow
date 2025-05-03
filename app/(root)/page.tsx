@@ -1,15 +1,17 @@
 "use client";
 
 import { Spotlight } from "@/components/ui/spotlight";
-import { Box, Lock, Settings, Sparkles, TrendingUpDown } from "lucide-react";
+import { ArrowRightToLine, Box, Lock, Settings, Sparkles, TrendingUpDown } from "lucide-react";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { Button } from "@/components/ui/button";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { motion } from 'framer-motion';
 import Faq02 from "@/components/kokonutui/faq-02";
-import { SignInButton, SignUpButton } from "@clerk/nextjs";
+import { SignInButton, SignUpButton, useAuth } from "@clerk/nextjs";
 
 export default function Home() {
+  const { isSignedIn } = useAuth(); // Check if user is logged in
+  
   return (
   <motion.div
     initial={{ opacity: 0 }}
@@ -50,13 +52,36 @@ export default function Home() {
           Automate and simplify the tedious parts of your business <br /> so you can focus on the really important stuff.
         </p>
         <div className="flex flex-row gap-6 w-auto mx-auto mt-8 sm:mt-12 items-center">
-          <SignUpButton>
-            <Button className="w-[9rem] md:w-[12rem] h-[2.5rem] md:h-[2.7rem] hover:cursor-pointer">Get Started</Button>
-          </SignUpButton>
-          <p className="text-sm md:text-lg text-zinc-500 font-light">or</p>
-          <SignInButton>
-            <Button className="w-[7rem] md:w-[9rem] h-[2.5rem] md:h-[2.7rem] hover:cursor-pointer text-zinc-100/50" variant='outline'>Log In</Button>
-          </SignInButton>
+        {isSignedIn ? (
+          <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, ease: 'easeInOut' }}
+    >
+      <button
+        className="flex flex-row items-center justify-center gap-2 w-30 sm:w-36 h-10 sm:h-12 dark-border-button"
+        onClick={() => window.location.href = '/dashboard'}
+      >
+        <span className="text-xs sm:text-sm font-medium">Dashboard</span>
+        <ArrowRightToLine className="w-4 h-4" />
+      </button>
+    </motion.div>
+        ) : (
+          <>
+            <div>
+              <SignUpButton>
+                <Button className="hover:cursor-pointer w-30 sm:w-40 h-10 sm:h-12">
+                  Get Started
+                </Button>
+              </SignUpButton>
+            </div>
+            <SignInButton>
+              <Button variant="outline" className="hover:cursor-pointer w-20 sm:w-24 h-10 sm:h-12">
+                Log In
+              </Button>
+            </SignInButton>
+          </>
+        )}
         </div>
       </div>
     </div>

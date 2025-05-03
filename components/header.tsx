@@ -43,7 +43,7 @@ const HeaderContent = () => {
         <ul className="flex flex-row gap-10 text-sm">
           <li className="relative">
             <button
-              className="flex items-center gap-1 hover:underline underline-offset-4 decoration-2 decoration-zinc-700 text-zinc-300 hover:text-zinc-100 transition ease-in-out duration-75 text-md"
+              className="flex gap-1 -mr-2 items-center hover:underline underline-offset-4 decoration-2 decoration-zinc-700 text-zinc-300 hover:text-zinc-100 transition ease-in-out duration-75 text-md"
               onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
             >
               Solutions
@@ -178,7 +178,7 @@ const HeaderContent = () => {
             </SheetTrigger>
             <SheetContent className="w-full">
               <SheetClose asChild>
-                <div className="absolute top-4 right-9">
+                <div className="absolute top-4 right-5">
                   <Button className="bg-zinc-800/70 border border-zinc-700 w-9 h-9 hover:bg-zinc-600/70 text-zinc-200 hover:text-zinc-100">
                     <X />
                   </Button>
