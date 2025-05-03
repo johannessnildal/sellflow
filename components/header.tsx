@@ -178,14 +178,14 @@ const HeaderContent = () => {
             </SheetTrigger>
             <SheetContent className="w-full">
               <SheetClose asChild>
-                <div className="absolute top-5 right-6">
-                  <Button className="bg-zinc-800/70 border border-zinc-700 w-6 h-6 hover:bg-zinc-600/70 text-zinc-200 hover:text-zinc-100">
+                <div className="absolute top-4 right-9">
+                  <Button className="bg-zinc-800/70 border border-zinc-700 w-9 h-9 hover:bg-zinc-600/70 text-zinc-200 hover:text-zinc-100">
                     <X />
                   </Button>
                 </div>
               </SheetClose>
               <SheetTitle>
-                <div className="flex items-center justify-left w-full h-16 bg-gradient-to-b from-zinc-800/70 to-zinc-950 border-b border-zinc-900">
+                <div className="flex items-center justify-left w-full h-18 bg-gradient-to-b from-zinc-800/70 to-zinc-950 border-b border-zinc-900">
                   <Link href="/">
                     <Image
                       src="/logo/white.svg"
@@ -234,7 +234,7 @@ const HeaderContent = () => {
 
               <SheetFooter>
                 <div className="pt-4 border-t border-t-zinc-900 border-zinc-800 text-center mx-auto">
-                  <p className="text-xs text-zinc-500">
+                  <p className="text-xs text-zinc-500 mb-10">
                     © {new Date().getFullYear()} Sellflow. All rights reserved.
                   </p>
                 </div>
