@@ -127,9 +127,9 @@ export default function TermsPage() {
     <main className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 bg-zinc-950">
       <div className="max-w-3xl mx-auto text-zinc-400">
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.2 }}
           className="text-3xl sm:text-4xl font-bold text-zinc-100 mb-12 text-center"
         >
           Terms of Service
@@ -139,21 +139,19 @@ export default function TermsPage() {
           {sections.map((section, index) => (
             <motion.section
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.2, delay: index * 0.05 }}
               className="space-y-6"
               id={`section-${index}`}
             >
               <h2 className="text-xl sm:text-2xl font-semibold text-zinc-100">{section.title}</h2>
               <p className="text-base sm:text-lg leading-relaxed text-zinc-400">{section.content}</p>
               <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                whileInView={{ opacity: 1, height: 'auto' }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.3, delay: 0.2 }}
-                className="bg-zinc-900 p-4 rounded-lg"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.2 }}
+                className="bg-gradient-to-br from-zinc-800/30 to-zinc-900/30 border border-zinc-800 p-4 rounded-lg"
               >
                 <h3 className="text-sm font-medium text-zinc-300 mb-2" id={`summary-${index}`}>
                   Summary
@@ -165,10 +163,9 @@ export default function TermsPage() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.2 }}
           className="mt-12 text-center text-zinc-400"
         >
           <p className="text-sm">
