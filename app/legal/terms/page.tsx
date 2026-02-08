@@ -41,8 +41,8 @@ export default function TermsPage() {
     },
     {
       title: '8. Governing Law',
-      content: `These Terms are governed by the laws of Norway, without regard to its conflict of law principles. Any disputes arising from these Terms or your use of our services will be resolved in the courts of Trondheim or Oslo, Norway. You agree to submit to the jurisdiction of these courts. We encourage resolving disputes through mediation or the EU Online Dispute Resolution platform (http://ec.europa.eu/odr) before escalating to courts. If any provision of these Terms is found to be unenforceable, the remaining provisions will remain in effect.`,
-      summary: `Norwegian law governs; disputes go to Trondheim or Oslo courts or EU ODR platform. Unenforceable provisions don’t affect the rest of the Terms.`,
+      content: `These Terms are governed by the laws of Norway, without regard to its conflict of law principles. Any disputes arising from these Terms or your use of our services will be resolved in the courts of Trondheim or Oslo, Norway. You agree to submit to the jurisdiction of these courts. We encourage resolving disputes through mediation or the EU Consumer Redress platform (https://consumer-redress.ec.europa.eu/index_en) before escalating to courts. If any provision of these Terms is found to be unenforceable, the remaining provisions will remain in effect.`,
+      summary: `Norwegian law governs; disputes go to Trondheim or Oslo courts or EU Consumer Redress platform. Unenforceable provisions don’t affect the rest of the Terms.`,
     },
     {
       title: '9. Data Protection (GDPR)',
